@@ -1,0 +1,29 @@
+@import 'normalizes.css';
+@import 'variables.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Jost', sans-serif;
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: var(--white-color);
+  height: 100%;
+  font-size: 14px;
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}

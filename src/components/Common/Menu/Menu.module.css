@@ -1,0 +1,14 @@
+@import url('../../../styles/variables.css');
+.menu__list {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+.menu__link {
+  color: var(--white-color);
+  text-decoration: none;
+  transition: opacity 0.7s;
+}
+.menu__link:hover {
+  opacity: 0.7;
+}
