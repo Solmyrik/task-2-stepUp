@@ -90,11 +90,11 @@ const Products = (props: Props) => {
       <div className={styles.products__body}>
         {displayedCards &&
           displayedCards.map((item, index) => (
-            <div>
+            <article>
               <Image src={item.image} alt={item.title} />
               <h4 className={styles.products__title}>{item.title}</h4>
               <Price value={item.price} />
-            </div>
+            </article>
           ))}
       </div>
       {!showAllCards && (

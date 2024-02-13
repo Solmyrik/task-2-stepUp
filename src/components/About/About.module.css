@@ -1,0 +1,53 @@
+@import url('../../styles/variables.css');
+
+.about {
+  background-color: var(--bg-color);
+  height: 580px;
+  position: relative;
+}
+.about__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  display: flex;
+}
+.about__decor {
+  position: absolute;
+  top: 0;
+  left: -220px;
+}
+.about__content {
+  padding-top: 222px;
+  flex: 0 1 50%;
+}
+.about__title {
+  color: var(--white-color);
+}
+.about__texts {
+  max-width: 380px;
+  margin-top: 7px;
+  margin-bottom: 50px;
+}
+.about__site {
+  color: var(--white-color);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 29px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.about__site::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 130px;
+  width: 30px;
+  height: 3px;
+  background-color: var(--white-color);
+}
+.about__image {
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+}
