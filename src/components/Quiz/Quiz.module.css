@@ -63,3 +63,26 @@
   align-items: center;
   gap: 2px;
 }
+
+@media (max-width: 1170px) {
+  .quiz__wrapper {
+    padding: 30px 50px;
+  }
+}
+@media (max-width: 992px) {
+  .quiz__items {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 35px;
+    row-gap: 25px;
+  }
+}
+@media (max-width: 491px) {
+  .quiz__items {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .quiz__wrapper {
+    padding: 30px 10px;
+  }
+}
