@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Quiz from './components/Quiz/Quiz';
 import Team from './components/Team/Team';
 import Faq from './components/Faq/Faq';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Team />
         <Faq />
       </main>
+      <Footer />
     </div>
   );
 }
