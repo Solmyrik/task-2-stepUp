@@ -3,6 +3,7 @@ import H2Title from '../Common/H2Title/H2Title';
 
 import styles from './Catalog.module.css';
 import SideBar from '../SideBar/SideBar';
+import Products from '../Products/Products';
 
 type Props = {};
 
@@ -13,6 +14,7 @@ const Catalog = (props: Props) => {
         <H2Title value="Catalog" className={styles.catalog__title} />
         <div className={styles.catalog__wrapper}>
           <SideBar />
+          <Products />
         </div>
       </div>
     </section>

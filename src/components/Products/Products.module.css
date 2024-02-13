@@ -1,0 +1,19 @@
+.products__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 11px;
+}
+
+.products__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+.product__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 31px;
+}

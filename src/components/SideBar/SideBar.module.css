@@ -3,6 +3,7 @@
 .sidebar {
   background-color: var(--sec-bg-color);
   flex: 0 0 280px;
+  align-self: flex-start;
 }
 .sidebar__wrapper {
   padding: 10px 20px 20px 20px;
