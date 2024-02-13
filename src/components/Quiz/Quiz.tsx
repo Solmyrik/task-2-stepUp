@@ -3,43 +3,11 @@ import styles from './Quiz.module.css';
 import H2Title from '../Common/H2Title/H2Title';
 import H3Title from '../Common/H3Title/H3Title';
 
-import quiz_item from '../../assets/image/quiz_item.jpeg';
 import QuizItem from './QuizItem';
 import Button from '../Common/Button/Button';
+import { quizItems } from '../../constans/quizItems';
 
 type Props = {};
-
-type QuizItems = {
-  image: string;
-  title: string;
-};
-
-const quizItems: QuizItems[] = [
-  {
-    image: quiz_item,
-    title: 'sneakers',
-  },
-  {
-    image: quiz_item,
-    title: 'sneakers',
-  },
-  {
-    image: quiz_item,
-    title: 'sneakers',
-  },
-  {
-    image: quiz_item,
-    title: 'sneakers',
-  },
-  {
-    image: quiz_item,
-    title: 'sneakers',
-  },
-  {
-    image: quiz_item,
-    title: 'sneakers',
-  },
-];
 
 const Quiz = (props: Props) => {
   return (
@@ -59,8 +27,8 @@ const Quiz = (props: Props) => {
           <div className={styles.quiz__body}>
             <H3Title value="We will select the perfect product for you" />
             <div className={styles.quiz__items}>
-              {quizItems.map((item) => (
-                <QuizItem title={item.title} image={item.image} />
+              {quizItems.map((item, index) => (
+                <QuizItem key={index} title={item.title} image={item.image} />
               ))}
             </div>
           </div>

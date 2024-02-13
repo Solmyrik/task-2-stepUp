@@ -3,19 +3,9 @@ import styles from './SideBar.module.css';
 import H3Title from '../Common/H3Title/H3Title';
 import Paragraph from '../Common/Paragraph/Paragraph';
 import Button from '../Common/Button/Button';
+import { categoryItems } from '../../constans/categoryItems';
 
 type Props = {};
-
-const categoryItems: string[] = [
-  'sneakers',
-  'sneakers',
-  'sneakers',
-  'sneakers',
-  'sneakers',
-  'sneakers',
-  'sneakers',
-  'sneakers',
-];
 
 const SideBar = (props: Props) => {
   return (

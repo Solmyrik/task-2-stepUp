@@ -3,16 +3,7 @@ import styles from './Header.module.css';
 import Logo from '../Common/Logo/Logo';
 import Menu from '../Common/Menu/Menu';
 import Cart from '../Common/Cart/Cart';
-
-const menuItems: string[] = [
-  'Catalog',
-  'About us',
-  'Product selection',
-  'Our team',
-  'Shipping and payment',
-  'Contacts',
-  'Cart',
-];
+import { menuItems } from '../../constans/menu';
 
 const Header: FC = () => {
   return (
