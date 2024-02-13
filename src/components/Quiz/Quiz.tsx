@@ -70,7 +70,7 @@ const Quiz = (props: Props) => {
               <div>of</div>
               <span>3</span>
             </div>
-            <Button type="tertiary" text="Next step" onClick={() => {}} />
+            <Button type="secondary-border" text="Next step" onClick={() => {}} />
           </div>
         </div>
       </div>

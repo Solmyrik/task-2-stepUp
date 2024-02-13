@@ -17,3 +17,16 @@
   justify-content: center;
   margin-top: 31px;
 }
+
+@media (max-width: 767px) {
+  .products__body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 491px) {
+  .products__body {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+  }
+}

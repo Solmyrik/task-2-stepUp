@@ -28,3 +28,12 @@
   left: 30px;
   z-index: 0;
 }
+
+@media (max-width: 992px) {
+  .intro__text {
+    bottom: -50px;
+  }
+  .intro {
+    padding: 60px 0px 60px 0px;
+  }
+}

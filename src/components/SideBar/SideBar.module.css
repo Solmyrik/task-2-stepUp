@@ -45,3 +45,10 @@
   gap: 35px;
   align-items: center;
 }
+
+@media (max-width: 491px) {
+  .sidebar {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}

@@ -5,3 +5,9 @@
   font-weight: 700;
   line-height: 43px;
 }
+
+@media (max-width: 767px) {
+  .h2 {
+    font-size: 24px;
+  }
+}

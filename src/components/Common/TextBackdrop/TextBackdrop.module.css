@@ -3,3 +3,19 @@
   font-size: 200px;
   font-weight: 700;
 }
+
+@media (max-width: 1170px) {
+  .text {
+    font-size: 150px;
+  }
+}
+@media (max-width: 992px) {
+  .text {
+    font-size: 100px;
+  }
+}
+@media (max-width: 767px) {
+  .text {
+    font-size: 40px;
+  }
+}

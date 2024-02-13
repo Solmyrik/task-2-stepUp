@@ -78,18 +78,11 @@ const productItems: ProductItems[] = [
 ];
 
 const Products = (props: Props) => {
-  const [showAllCards, setShowAllCards] = useState<boolean>(false);
-  const displayedCards: ProductItems[] = showAllCards ? productItems : productItems.slice(0, 9);
-
-  const onShowAll = () => {
-    setShowAllCards(true);
-  };
-
   return (
     <div className={styles.products}>
       <div className={styles.products__body}>
-        {displayedCards &&
-          displayedCards.map((item, index) => (
+        {productItems &&
+          productItems.map((item, index) => (
             <article>
               <Image src={item.image} alt={item.title} />
               <h4 className={styles.products__title}>{item.title}</h4>
@@ -97,11 +90,10 @@ const Products = (props: Props) => {
             </article>
           ))}
       </div>
-      {!showAllCards && (
-        <div className={styles.product__button}>
-          <Button type="primary" text="Show more" width="171px" onClick={onShowAll} />
-        </div>
-      )}
+
+      <div className={styles.product__button}>
+        <Button type="primary" text="Show more" width="171px" onClick={() => {}} />
+      </div>
     </div>
   );
 };

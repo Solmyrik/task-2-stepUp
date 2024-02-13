@@ -19,10 +19,6 @@ const buttonStyles: Record<ButtonType, React.CSSProperties> = {
     borderRadius: '4px',
   },
   'secondary-border': {
-    backgroundColor: 'transparent',
-    color: 'black',
-  },
-  tertiary: {
     fontSize: '16px',
     fontWeight: '400',
     color: '#444B58',
@@ -30,6 +26,11 @@ const buttonStyles: Record<ButtonType, React.CSSProperties> = {
     borderRadius: '4px',
     border: '1px solid rgb(68, 75, 88)',
     lineHeight: '23px',
+  },
+  tertiary: {
+    fontSize: '16px',
+    fontWeight: '400',
+    color: '#444B58',
   },
 };
 
