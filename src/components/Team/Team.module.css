@@ -58,6 +58,7 @@
 }
 .team__content {
   position: absolute;
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -88,5 +89,11 @@
   .team__decor {
     top: -200px;
     right: -460px;
+  }
+  .team__item::after {
+    opacity: 1;
+  }
+  .team__content {
+    opacity: 1;
   }
 }
