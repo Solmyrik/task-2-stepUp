@@ -5,6 +5,7 @@ import Catalog from './components/Catalog/Catalog';
 import About from './components/About/About';
 import Quiz from './components/Quiz/Quiz';
 import Team from './components/Team/Team';
+import Faq from './components/Faq/Faq';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Quiz />
         <Team />
+        <Faq />
       </main>
     </div>
   );
