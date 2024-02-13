@@ -4,6 +4,7 @@ import Intro from './components/Intro/Intro';
 import Catalog from './components/Catalog/Catalog';
 import About from './components/About/About';
 import Quiz from './components/Quiz/Quiz';
+import Team from './components/Team/Team';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Catalog />
         <About />
         <Quiz />
+        <Team />
       </main>
     </div>
   );
