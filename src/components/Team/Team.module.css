@@ -5,6 +5,7 @@
   padding-top: 60px;
   padding-bottom: 200px;
   position: relative;
+  overflow: hidden;
 }
 .team__decor {
   position: absolute;
@@ -63,4 +64,29 @@
   text-align: center;
   opacity: 0;
   transition: opacity 0.5s;
+}
+
+@media (max-width: 767px) {
+  .team {
+    background-color: var(--bg-color);
+    padding-top: 40px;
+    padding-bottom: 100px;
+    position: relative;
+  }
+  .team__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team__item:nth-child(2) {
+    transform: translate(0, 0);
+  }
+  .team__item:nth-child(5) {
+    transform: translate(0, 0);
+  }
+  .team__item:nth-child(2n) {
+    transform: translate(0, 40px);
+  }
+  .team__decor {
+    top: -200px;
+    right: -460px;
+  }
 }

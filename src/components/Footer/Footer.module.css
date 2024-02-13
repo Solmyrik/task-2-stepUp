@@ -5,8 +5,19 @@
 .footer__container {
   height: 80px;
   max-width: 1170px;
+  padding: 0 15px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 992px) {
+  .footer {
+    padding: 20px 0px;
+  }
+  .footer__container {
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
