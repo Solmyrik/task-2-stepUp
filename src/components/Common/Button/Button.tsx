@@ -11,27 +11,32 @@ const buttonStyles: Record<ButtonType, React.CSSProperties> = {
     borderRadius: '4px',
   },
   secondary: {
-    backgroundColor: 'green',
-    width: '100px',
+    backgroundColor: '#444B58',
+    height: '67px',
+    color: '#ffffff',
+    fontSize: '16px',
+    fontWeight: '400',
+    borderRadius: '4px',
   },
   'secondary-border': {
     backgroundColor: 'transparent',
     color: 'black',
   },
   tertiary: {
-    backgroundColor: 'lightgray',
-    color: 'black',
+    fontSize: '16px',
+    fontWeight: '400',
+    color: '#444B58',
   },
 };
 
 type ButtonType = 'primary' | 'secondary' | 'secondary-border' | 'tertiary';
-type Props = { type: ButtonType; width: number; text: string; onClick: () => void };
+type Props = { type: ButtonType; width: string; text: string; onClick: () => void };
 
 const Button: React.FC<Props> = (props) => {
   return (
     <button
       className={styles.button}
-      style={{ ...buttonStyles[props.type], width: `${props.width}px` }}
+      style={{ ...buttonStyles[props.type], width: `${props.width}` }}
       onClick={props.onClick}>
       {props.text}
     </button>

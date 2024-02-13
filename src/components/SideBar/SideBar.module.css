@@ -1,0 +1,46 @@
+@import url('../../styles/variables.css');
+
+.sidebar {
+  background-color: var(--sec-bg-color);
+  flex: 0 0 280px;
+}
+.sidebar__wrapper {
+  padding: 10px 20px 20px 20px;
+}
+.sidebar__title {
+  margin-bottom: 25px;
+}
+.sidebar__subtitle {
+  margin-bottom: 3px;
+}
+.sidebar__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  margin-bottom: 32px;
+}
+.sidebar__item {
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--small-text-color);
+  cursor: pointer;
+}
+.sidebar__item:nth-child(1n) {
+  border-left: 1px solid var(--small-text-color);
+}
+.sidebar__item:nth-child(2n) {
+  border-left: 1px solid var(--small-text-color);
+  border-right: 1px solid var(--small-text-color);
+}
+.sidebar__item:nth-last-child(-n + 2) {
+  border-bottom: 1px solid var(--small-text-color);
+}
+
+.sidebar__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+}

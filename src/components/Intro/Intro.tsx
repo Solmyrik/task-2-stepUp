@@ -12,15 +12,19 @@ const subTitle: string =
   'We sell smartphones, laptops, clothes, shoes and many other products at low prices';
 
 const Intro: FC = () => {
-  const handleClick = () => {
-    console.log('Button clicked');
+  const scrollToCaratalog = () => {
+    const element = document.getElementById('catalog');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
+
   return (
     <section className={styles.intro}>
       <div className={styles.intro__container}>
         <H1Title className={styles.intro__title} value={title} />
         <Paragraph className={styles.intro__subtitle} value={subTitle} color="#ffffff" />
-        <Button onClick={handleClick} type="primary" width={201} text="Go to shopping" />
+        <Button onClick={scrollToCaratalog} type="primary" width="201px" text="Go to shopping" />
         <TextBackdrop className={styles.intro__text} value="Goods4you" />
       </div>
     </section>
