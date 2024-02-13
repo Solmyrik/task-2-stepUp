@@ -16,7 +16,7 @@ const menuItems: string[] = [
 
 const Header: FC = () => {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <div className={styles.header__container}>
         <Logo title="Goods4you" />
         <div className={styles.header__left}>
@@ -24,7 +24,7 @@ const Header: FC = () => {
           <Cart value={1} />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

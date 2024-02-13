@@ -1,0 +1,30 @@
+@import url('../../styles/variables.css');
+
+.intro {
+  padding: 100px 0px 93px 0px;
+  background-color: var(--bg-color);
+}
+
+.intro__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  position: relative;
+}
+
+.intro__title {
+  margin-bottom: 20px;
+  max-width: 550px;
+}
+
+.intro__subtitle {
+  max-width: 350px;
+  margin-bottom: 40px;
+}
+
+.intro__text {
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  z-index: 0;
+}

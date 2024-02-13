@@ -1,0 +1,7 @@
+@import url('../../../styles/variables.css');
+
+.paragraph {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+}
