@@ -3,6 +3,7 @@ import Header from './components/Header/Header';
 import Intro from './components/Intro/Intro';
 import Catalog from './components/Catalog/Catalog';
 import About from './components/About/About';
+import Quiz from './components/Quiz/Quiz';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Intro />
         <Catalog />
         <About />
+        <Quiz />
       </main>
     </div>
   );

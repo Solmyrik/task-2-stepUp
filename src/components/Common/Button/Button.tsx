@@ -26,11 +26,15 @@ const buttonStyles: Record<ButtonType, React.CSSProperties> = {
     fontSize: '16px',
     fontWeight: '400',
     color: '#444B58',
+    padding: '22px 42px 22px 42px',
+    borderRadius: '4px',
+    border: '1px solid rgb(68, 75, 88)',
+    lineHeight: '23px',
   },
 };
 
 type ButtonType = 'primary' | 'secondary' | 'secondary-border' | 'tertiary';
-type Props = { type: ButtonType; width: string; text: string; onClick: () => void };
+type Props = { type: ButtonType; width?: string; text: string; onClick: () => void };
 
 const Button: React.FC<Props> = (props) => {
   return (

@@ -1,0 +1,65 @@
+@import url('../../styles/variables.css');
+
+.quiz {
+  padding: 60px 0px;
+}
+
+.quiz__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.quiz__wrapper {
+  background-color: var(--sec-bg-color);
+  padding: 40px 100px;
+}
+.quiz__title {
+  margin-bottom: 7px;
+}
+.quiz__header {
+  padding-bottom: 2.5px;
+  border-bottom: 1px solid rgb(128, 128, 128);
+  margin-bottom: 20px;
+}
+.quiz__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 23px;
+  color: #808080;
+}
+
+.quiz__items {
+  margin-top: 9px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 70px;
+  row-gap: 17px;
+  padding-bottom: 39px;
+  border-bottom: 1px solid rgb(128, 128, 128);
+}
+
+.quiz__input {
+  border: 1px solid rgb(219, 187, 169);
+  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.quiz__label {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  margin-top: 10px;
+}
+
+.quiz__footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quiz__progress {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
