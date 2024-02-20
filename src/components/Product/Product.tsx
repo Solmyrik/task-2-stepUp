@@ -36,42 +36,42 @@ const Product = (props: Props) => {
           <div className={styles.product__header}>
             <H3Title value={title} />
             <div className={styles.product__item}>
-              <Paragraph value="SKU ID" color="#B2B5BB" />
-              <Paragraph value={id} color="#444B58" />
+              <Paragraph value="SKU ID" type="primary-opacity" />
+              <Paragraph value={id} type="secondary" />
             </div>
           </div>
           <div className={styles.product__specifications}>
             <div className={styles.product__item}>
-              <Paragraph value="Rating" color="#B2B5BB" />
+              <Paragraph value="Rating" type="primary-opacity" />
               <Stars rating={rating && Math.floor(rating)} />
             </div>
             <div className={styles.product__item}>
-              <Paragraph value="Base price" color="#B2B5BB" />
-              <Paragraph value={`${price}$`} color="#444B58" />
+              <Paragraph value="Base price" type="primary-opacity" />
+              <Paragraph value={`${price}$`} type="secondary" />
             </div>
             <div className={styles.product__item}>
-              <Paragraph value="Discount percentage" color="#B2B5BB" />
-              <Paragraph value={`${discountPercentage}%`} color="#444B58" />
+              <Paragraph value="Discount percentage" type="primary-opacity" />
+              <Paragraph value={`${discountPercentage}%`} type="secondary" />
             </div>
             <div className={styles.product__item}>
-              <Paragraph value="Discount price" color="#B2B5BB" />
-              <Paragraph value={`${discountPrice}$`} color="#444B58" />
+              <Paragraph value="Discount price" type="primary-opacity" />
+              <Paragraph value={`${discountPrice}$`} type="secondary" />
             </div>
             <div className={styles.product__item}>
-              <Paragraph value="Stock" color="#B2B5BB" />
-              <Paragraph value={stock} color="#444B58" />
+              <Paragraph value="Stock" type="primary-opacity" />
+              <Paragraph value={stock} type="secondary" />
             </div>
             <div className={styles.product__item}>
-              <Paragraph value="Brand" color="#B2B5BB" />
-              <Paragraph value={brand} color="#444B58" />
+              <Paragraph value="Brand" type="primary-opacity" />
+              <Paragraph value={brand} type="secondary" />
             </div>
             <div className={styles.product__item}>
-              <Paragraph value="Category" color="#B2B5BB" />
-              <Paragraph value={category} color="#444B58" />
+              <Paragraph value="Category" type="primary-opacity" />
+              <Paragraph value={category} type="secondary" />
             </div>
             <div className={styles.product__item}>
-              <Paragraph value="Description" color="#B2B5BB" />
-              <Paragraph value={description} color="#444B58" />
+              <Paragraph value="Description" type="primary-opacity" />
+              <Paragraph value={description} type="secondary" />
             </div>
           </div>
         </article>

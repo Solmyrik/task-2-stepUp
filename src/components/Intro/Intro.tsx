@@ -13,7 +13,7 @@ const Intro: FC = () => {
     <section className={styles.intro}>
       <div className={styles.intro__container}>
         <H1Title className={styles.intro__title} value={introTexts.title} />
-        <Paragraph className={styles.intro__subtitle} value={introTexts.subTitle} color="#ffffff" />
+        <Paragraph className={styles.intro__subtitle} value={introTexts.subTitle} type="primary" />
         <Button onClick={() => {}} type="primary" width="201px" text="Go to shopping" />
         <TextBackdrop className={styles.intro__text} value="Goods4you" />
       </div>

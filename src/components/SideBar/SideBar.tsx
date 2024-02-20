@@ -38,7 +38,7 @@ const SideBar = (props: Props) => {
       <div className={styles.sidebar__wrapper}>
         <H3Title className={styles.sidebar__title} value="Selection by parameters" />
         <div className={styles.sidebar__body}>
-          <Paragraph className={styles.sidebar__subtitle} value="Category" color="#444B58" />
+          <Paragraph className={styles.sidebar__subtitle} value="Category" type="secondary" />
           <div className={styles.sidebar__items}>
             {categories &&
               categories.map((item, index) => (
@@ -50,7 +50,7 @@ const SideBar = (props: Props) => {
                       ? [styles.sidebar__item, styles.active].join(' ')
                       : styles.sidebar__item
                   }>
-                  <Paragraph value={item} color="#444B58" />
+                  <Paragraph value={item} type="secondary" />
                 </div>
               ))}
           </div>

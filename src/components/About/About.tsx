@@ -21,10 +21,10 @@ const About = (props: Props) => {
           <H2Title className={styles.about__title} value="About us" />
           <div className={styles.about__texts}>
             <Paragraph
-              color="#ffffff"
+              type="primary"
               value="Every day a person has a choice what to spend his money on. Stores and websites offer an endless list of products."
             />
-            <Paragraph color="#ffffff" value="But we will help you make the right choice!" />
+            <Paragraph type="primary" value="But we will help you make the right choice!" />
           </div>
           <cite className={styles.about__site}>
             <span>Goods4you</span>

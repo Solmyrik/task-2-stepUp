@@ -29,7 +29,7 @@ const FaqItem = (props: Props) => {
           <div className={styles.answers__title}>{props.ques}</div>
         </div>
         <div ref={myElementRef} style={{ maxHeight }} className={styles.answers__body}>
-          <Paragraph value={props.answer} color="#24242480" />
+          <Paragraph value={props.answer} type="secondary" />
         </div>
       </div>
       <div

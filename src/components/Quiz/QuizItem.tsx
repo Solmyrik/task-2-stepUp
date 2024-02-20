@@ -14,7 +14,7 @@ const QuizItem: React.FC<Props> = (props) => {
     <article className={styles.quiz__item}>
       <label className={styles.quiz__label}>
         <div className={styles.quiz__input}></div>
-        <Paragraph value={props.title} color="#444B58" />
+        <Paragraph value={props.title} type="secondary" />
       </label>
     </article>
   );

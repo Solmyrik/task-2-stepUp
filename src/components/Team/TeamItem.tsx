@@ -16,7 +16,7 @@ const TeamItem: React.FC<TeamItems> = (props) => {
       <Image src={props.image} alt={props.name} />
       <div className={styles.team__content}>
         <H3Title value={props.name} className={styles.team__title} />
-        <Paragraph value={props.post} color="#ffffff" />
+        <Paragraph value={props.post} type="primary" />
       </div>
     </article>
   );
