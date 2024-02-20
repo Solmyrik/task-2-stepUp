@@ -10,6 +10,15 @@ const buttonStyles: Record<ButtonType, React.CSSProperties> = {
     fontWeight: '400',
     borderRadius: '4px',
   },
+  'primary-search': {
+    backgroundColor: '#F14F4F',
+    color: '#ffffff',
+    height: '60px',
+    padding: '0px 47px',
+    fontSize: '16px',
+    fontWeight: '400',
+    borderRadius: '4px',
+  },
   secondary: {
     backgroundColor: '#444B58',
     height: '67px',
@@ -34,8 +43,13 @@ const buttonStyles: Record<ButtonType, React.CSSProperties> = {
   },
 };
 
-type ButtonType = 'primary' | 'secondary' | 'secondary-border' | 'tertiary';
-type Props = { type: ButtonType; width?: string; text: string; onClick: () => void };
+type ButtonType = 'primary' | 'primary-search' | 'secondary' | 'secondary-border' | 'tertiary';
+type Props = {
+  type: ButtonType;
+  width?: string;
+  text: string;
+  onClick: (() => void) | ((e: React.MouseEvent<HTMLButtonElement>) => void);
+};
 
 const Button: React.FC<Props> = (props) => {
   return (

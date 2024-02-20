@@ -4,11 +4,13 @@ import H2Title from '../Common/H2Title/H2Title';
 import FaqItem from './FaqItem';
 import { faqItems } from '../../constans/faqItems';
 
-type Props = {};
+type Props = {
+  id?: string;
+};
 
 const Faq = (props: Props) => {
   return (
-    <section className={styles.faq}>
+    <section id={props.id} className={styles.faq}>
       <div className={styles.faq__container}>
         <H2Title value="Faq" />
         <div className={styles.faq__items}>

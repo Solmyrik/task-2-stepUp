@@ -5,7 +5,9 @@ import styles from './Catalog.module.css';
 import SideBar from '../SideBar/SideBar';
 import Products from '../Products/Products';
 
-type Props = {};
+type Props = {
+  id?: string;
+};
 
 const Catalog = (props: Props) => {
   return (

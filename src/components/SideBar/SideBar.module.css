@@ -21,6 +21,8 @@
   margin-bottom: 32px;
 }
 .sidebar__item {
+  text-align: center;
+  padding: 0px 2px;
   height: 57px;
   display: flex;
   align-items: center;
@@ -51,4 +53,8 @@
     flex: 1 1 100%;
     width: 100%;
   }
+}
+
+.active {
+  background-color: rgba(239, 222, 212, 0.9);
 }

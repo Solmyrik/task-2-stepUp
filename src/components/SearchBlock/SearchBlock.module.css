@@ -1,0 +1,30 @@
+.search {
+  display: flex;
+  gap: 19px;
+}
+.search label {
+  flex: 1 1 auto;
+  height: 60px;
+  border-radius: 4px;
+  background: rgb(247, 247, 247);
+  display: flex;
+  align-items: center;
+}
+.search input {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  outline: none;
+  padding-left: 17px;
+  color: rgb(178, 181, 187);
+  font-size: 16px;
+  font-weight: 400;
+  /* height: 100%; */
+}
+
+@media (max-width: 767px) {
+  .search {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

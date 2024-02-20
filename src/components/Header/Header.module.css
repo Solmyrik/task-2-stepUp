@@ -23,7 +23,7 @@
     flex-direction: column;
   }
   .header__left {
-    margin-top: -26px;
+    /* margin-top: -26px; */
     flex-direction: column-reverse;
     gap: 20px;
     align-items: end;

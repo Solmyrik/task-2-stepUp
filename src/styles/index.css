@@ -27,3 +27,11 @@ body {
   margin: 0 auto;
   padding: 0px 15px;
 }
+
+.catalog-page {
+  margin-top: 55px;
+  margin-bottom: 100px;
+}
+.catalog-page__search {
+  margin: 50px 0px;
+}

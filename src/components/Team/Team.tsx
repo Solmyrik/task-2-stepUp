@@ -6,11 +6,13 @@ import decor from '../../assets/image/team/decor.png';
 import TeamItem from './TeamItem';
 import { teamItems } from '../../constans/teamItems';
 
-type Props = {};
+type Props = {
+  id?: string;
+};
 
 const Team = (props: Props) => {
   return (
-    <section className={styles.team}>
+    <section id={props.id} className={styles.team}>
       <img className={styles.team__decor} src={decor} alt="decor" />
       <div className={styles.team__container}>
         <H2Title value="Our team" className={styles.team__title} />

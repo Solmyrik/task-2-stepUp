@@ -1,0 +1,40 @@
+.product {
+  margin: 55px 0px 100px 0px;
+}
+.product__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  position: relative;
+  display: flex;
+  gap: 42px;
+}
+.product__content {
+  flex: 0 1 50%;
+}
+.product__gallery {
+  flex: 0 1 50%;
+}
+.product__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 49px;
+}
+
+.product__item {
+  display: flex;
+  gap: 10px;
+}
+.product__specifications {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+
+@media (max-width: 992px) {
+  .product__container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

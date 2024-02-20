@@ -1,0 +1,28 @@
+.gallery__bigimg {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.gallary__images {
+  display: flex;
+  gap: 20px;
+}
+.gallery__img {
+  width: 70px;
+  height: 75px;
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .gallery__bigimg {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  .gallary__images {
+    overflow: auto;
+  }
+}

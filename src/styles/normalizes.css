@@ -480,3 +480,8 @@ button {
   cursor: pointer;
   /* Дополнительные стили (при необходимости) */
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

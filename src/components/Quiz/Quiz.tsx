@@ -6,12 +6,17 @@ import H3Title from '../Common/H3Title/H3Title';
 import QuizItem from './QuizItem';
 import Button from '../Common/Button/Button';
 import { quizItems } from '../../constans/quizItems';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
 
-type Props = {};
+type Props = {
+  id?: string;
+};
 
 const Quiz = (props: Props) => {
+  const categories = useSelector((state: RootState) => state.categories.categories);
   return (
-    <section className={styles.quiz}>
+    <section id={props.id} className={styles.quiz}>
       <div className={styles.quiz__container}>
         <div className={styles.quiz__wrapper}>
           <div className={styles.quiz__header}>
@@ -27,8 +32,8 @@ const Quiz = (props: Props) => {
           <div className={styles.quiz__body}>
             <H3Title value="We will select the perfect product for you" />
             <div className={styles.quiz__items}>
-              {quizItems.map((item, index) => (
-                <QuizItem key={index} title={item.title} image={item.image} />
+              {categories.map((item, index) => (
+                <QuizItem key={index} title={item} />
               ))}
             </div>
           </div>
@@ -36,7 +41,7 @@ const Quiz = (props: Props) => {
             <div className={styles.quiz__progress}>
               <span>1</span>
               <div>of</div>
-              <span>3</span>
+              <span>2</span>
             </div>
             <Button type="secondary-border" text="Next step" onClick={() => {}} />
           </div>

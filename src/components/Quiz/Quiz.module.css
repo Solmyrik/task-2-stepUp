@@ -31,7 +31,7 @@
 .quiz__items {
   margin-top: 9px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   column-gap: 70px;
   row-gap: 17px;
   padding-bottom: 39px;

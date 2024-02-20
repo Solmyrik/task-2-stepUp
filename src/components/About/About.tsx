@@ -6,11 +6,13 @@ import H2Title from '../Common/H2Title/H2Title';
 import Paragraph from '../Common/Paragraph/Paragraph';
 import img from '../../assets/image/about.png';
 
-type Props = {};
+type Props = {
+  id?: string;
+};
 
 const About = (props: Props) => {
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <div className={styles.about__container}>
         <div className={styles.about__decor}>
           <img src={figure} alt="figure" />
