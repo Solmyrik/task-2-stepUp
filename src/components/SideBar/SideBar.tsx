@@ -7,7 +7,7 @@ import { categoryItems } from '../../constans/categoryItems';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
 import { fetchAllCategories } from '../../redux/slices/CategoriesSlice';
-import { fetchProductsOfCategories } from '../../redux/slices/ProductsSlice';
+import { fetchProducts, fetchProductsOfCategories } from '../../redux/slices/ProductsSlice';
 
 type Props = {};
 
@@ -21,9 +21,16 @@ const SideBar = (props: Props) => {
     dispatch(fetchAllCategories());
   }, []);
 
-  const onChangeCategories = (item: string) => {
+  const onChangeActiveCategories = (item: string) => {
     setActiveCategories(item);
-    dispatch(fetchProductsOfCategories(item));
+  };
+
+  const onChangeCategories = () => {
+    dispatch(fetchProductsOfCategories(activeCategories));
+  };
+
+  const onReset = () => {
+    dispatch(fetchProducts());
   };
 
   return (
@@ -36,7 +43,7 @@ const SideBar = (props: Props) => {
             {categories &&
               categories.map((item, index) => (
                 <div
-                  onClick={() => onChangeCategories(item)}
+                  onClick={() => onChangeActiveCategories(item)}
                   key={index}
                   className={
                     activeCategories === item
@@ -48,13 +55,8 @@ const SideBar = (props: Props) => {
               ))}
           </div>
           <div className={styles.sidebar__buttons}>
-            <Button type="secondary" width="100%" text="Apply" onClick={() => console.log()} />
-            <Button
-              type="tertiary"
-              width="fit-content"
-              text="Reset"
-              onClick={() => console.log()}
-            />
+            <Button type="secondary" width="100%" text="Apply" onClick={onChangeCategories} />
+            <Button type="tertiary" width="fit-content" text="Reset" onClick={onReset} />
           </div>
         </div>
       </div>
