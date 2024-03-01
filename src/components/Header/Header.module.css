@@ -1,11 +1,8 @@
-@import url('../../styles/variables.css');
 .header {
   background-color: var(--bg-color);
 }
 .header__container {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 15px 15px 8px 15px;
+  padding: 15px 15px 8px 15px !important;
   display: flex;
   justify-content: space-between;
   align-items: center;

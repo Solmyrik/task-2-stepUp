@@ -36,9 +36,11 @@ const SideBar = (props: Props) => {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.sidebar__wrapper}>
-        <H3Title className={styles.sidebar__title} value="Selection by parameters" />
+        <H3Title className={styles.sidebar__title}>Selection by parameters</H3Title>
         <div className={styles.sidebar__body}>
-          <Paragraph className={styles.sidebar__subtitle} value="Category" type="secondary" />
+          <Paragraph className={styles.sidebar__subtitle} type="secondary">
+            Category
+          </Paragraph>
           <div className={styles.sidebar__items}>
             {categories &&
               categories.map((item, index) => (
@@ -50,13 +52,17 @@ const SideBar = (props: Props) => {
                       ? [styles.sidebar__item, styles.active].join(' ')
                       : styles.sidebar__item
                   }>
-                  <Paragraph value={item} type="secondary" />
+                  <Paragraph type="secondary">{item}</Paragraph>
                 </div>
               ))}
           </div>
           <div className={styles.sidebar__buttons}>
-            <Button type="secondary" width="100%" text="Apply" onClick={onChangeCategories} />
-            <Button type="tertiary" width="fit-content" text="Reset" onClick={onReset} />
+            <Button type="secondary" onClick={onChangeCategories}>
+              Apply
+            </Button>
+            <Button type="tertiary" onClick={onReset}>
+              Reset
+            </Button>
           </div>
         </div>
       </div>

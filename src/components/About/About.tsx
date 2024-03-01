@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './About.module.css';
 
 import figure from '../../assets/image/figure.svg';
@@ -18,13 +17,13 @@ const About = (props: Props) => {
           <img src={figure} alt="figure" />
         </div>
         <article className={styles.about__content}>
-          <H2Title className={styles.about__title} value="About us" />
+          <H2Title className={styles.about__title}>About us</H2Title>
           <div className={styles.about__texts}>
-            <Paragraph
-              type="primary"
-              value="Every day a person has a choice what to spend his money on. Stores and websites offer an endless list of products."
-            />
-            <Paragraph type="primary" value="But we will help you make the right choice!" />
+            <Paragraph type="primary">
+              Every day a person has a choice what to spend his money on. Stores and websites offer
+              an endless list of products.
+            </Paragraph>
+            <Paragraph type="primary">But we will help you make the right choice!</Paragraph>
           </div>
           <cite className={styles.about__site}>
             <span>Goods4you</span>

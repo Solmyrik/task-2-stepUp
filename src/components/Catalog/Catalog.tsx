@@ -1,9 +1,9 @@
-import React from 'react';
 import H2Title from '../Common/H2Title/H2Title';
-
-import styles from './Catalog.module.css';
 import SideBar from '../SideBar/SideBar';
 import Products from '../Products/Products';
+
+import styles from './Catalog.module.css';
+import Container from '../Common/Container/Container';
 
 type Props = {
   id?: string;
@@ -12,13 +12,13 @@ type Props = {
 const Catalog = (props: Props) => {
   return (
     <section id="catalog" className={styles.catalog}>
-      <div className={styles.catalog__container}>
-        <H2Title value="Catalog" className={styles.catalog__title} />
+      <Container>
+        <H2Title className={styles.catalog__title}>Catalog</H2Title>
         <div className={styles.catalog__wrapper}>
           <SideBar />
           <Products />
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

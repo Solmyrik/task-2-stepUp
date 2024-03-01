@@ -1,14 +1,7 @@
-@import url('../../styles/variables.css');
-
 .quiz {
   padding: 60px 0px;
 }
 
-.quiz__container {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
 .quiz__wrapper {
   background-color: var(--sec-bg-color);
   padding: 40px 100px;
@@ -38,18 +31,33 @@
   border-bottom: 1px solid rgb(128, 128, 128);
 }
 
+.quiz__products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 35px 40px;
+  background-color: var(--small-text-color);
+}
+
 .quiz__input {
+  display: none;
+}
+.quiz__input_fake {
   border: 1px solid rgb(219, 187, 169);
   border-radius: 4px;
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
+.quiz__input_fake.active {
+  background-color: rgb(219, 187, 169);
+}
 .quiz__label {
   display: flex;
   gap: 10px;
   align-items: flex-end;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 .quiz__footer {

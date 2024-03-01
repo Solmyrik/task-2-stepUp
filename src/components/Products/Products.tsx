@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Products.module.css';
-
-import Image from '../Common/Image/Image';
-import Price from '../Common/Price/Price';
 import Button from '../Common/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../redux/store';
 import { fetchProducts, fetchProductsSkip } from '../../redux/slices/ProductsSlice';
-import { Link } from 'react-router-dom';
+import ProductsItem from './ProductsItem';
+import NotFound from '../Common/NotFoundPage/NotFoundPage';
 
 type Props = {};
 
@@ -16,35 +14,56 @@ const Products = (props: Props) => {
   const dispatch = useDispatch<AppDispatch>();
   const productItems = useSelector((state: RootState) => state.products.products);
   const total = useSelector((state: RootState) => state.products.total);
+  const [productsNotFound, setProductsNotFound] = useState(false);
 
   useEffect(() => {
     dispatch(fetchProducts());
   }, []);
+
+  useEffect(() => {
+    if (!productItems.length) {
+      setProductsNotFound(true);
+    } else {
+      setProductsNotFound(false);
+    }
+  }, [productItems]);
 
   const onAddNewProduct = () => {
     dispatch(fetchProductsSkip(skip + 9));
     setSkip(skip + 9);
   };
 
+  if (productsNotFound) {
+    return (
+      <>
+        <NotFound>Товары не найдены</NotFound>
+      </>
+    );
+  }
+
   return (
-    <div className={styles.products}>
+    <article className={styles.products}>
       <div className={styles.products__body}>
         {productItems &&
           productItems.map((item, index) => (
-            <Link to={`/catalog/${item.id}`} key={index}>
-              <Image className={styles.products__image} src={item.thumbnail} alt={item.title} />
-              <h4 className={styles.products__title}>{item.title}</h4>
-              <Price value={item.price} />
-            </Link>
+            <ProductsItem
+              key={index}
+              id={item.id}
+              thumbnail={item.thumbnail}
+              title={item.title}
+              price={item.price}
+            />
           ))}
       </div>
 
       {total > productItems.length && (
         <div className={styles.product__button}>
-          <Button type="primary" text="Show more" width="171px" onClick={() => onAddNewProduct()} />
+          <Button type="primary" onClick={() => onAddNewProduct()}>
+            Show more
+          </Button>
         </div>
       )}
-    </div>
+    </article>
   );
 };
 

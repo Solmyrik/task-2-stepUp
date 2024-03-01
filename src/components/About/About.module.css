@@ -1,5 +1,3 @@
-@import url('../../styles/variables.css');
-
 .about {
   background-color: var(--bg-color);
   height: 580px;

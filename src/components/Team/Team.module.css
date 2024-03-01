@@ -1,5 +1,3 @@
-@import url('../../styles/variables.css');
-
 .team {
   background-color: var(--bg-color);
   padding-top: 60px;

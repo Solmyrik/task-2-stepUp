@@ -1,12 +1,6 @@
 .catalog {
   padding: 53px 0px;
 }
-.catalog__container {
-  max-width: 1170px;
-  margin: 0 auto;
-  padding: 0px 15px;
-  position: relative;
-}
 .catalog__title {
   color: rgb(68, 75, 88);
   margin-bottom: 33px;

@@ -15,7 +15,7 @@ const Team = (props: Props) => {
     <section id={props.id} className={styles.team}>
       <img className={styles.team__decor} src={decor} alt="decor" />
       <div className={styles.team__container}>
-        <H2Title value="Our team" className={styles.team__title} />
+        <H2Title className={styles.team__title}>Our team</H2Title>
         <div className={styles.team__items}>
           {teamItems.map((item, index) => (
             <TeamItem key={index} image={item.image} name={item.name} post={item.post} />

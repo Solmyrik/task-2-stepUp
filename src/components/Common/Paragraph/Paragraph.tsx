@@ -1,23 +1,9 @@
 import React from 'react';
 import styles from './Paragraph.module.css';
-
-const paragraphStyles: Record<string, React.CSSProperties> = {
-  primary: {
-    color: '#ffffff',
-  },
-  secondary: {
-    color: '#444B58',
-  },
-  'primary-opacity': {
-    color: '#B2B5BB',
-  },
-  tertiary: {
-    color: '#808080',
-  },
-};
+import { paragraphStyles } from './paragraphStyles';
 
 type Props = {
-  value: string;
+  children: React.ReactNode;
   className?: string;
   type?: any;
 };
@@ -26,7 +12,7 @@ const Paragraph: React.FC<Props> = (props) => {
   const style = paragraphStyles[props.type] || {};
   return (
     <p className={`${styles.paragraph} ${props.className}`} style={{ ...style }}>
-      {props.value}
+      {props.children}
     </p>
   );
 };

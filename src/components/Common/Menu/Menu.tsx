@@ -1,25 +1,14 @@
 import React from 'react';
 import styles from './Menu.module.css';
 import { Link } from 'react-router-dom';
-
-export interface MenuItem {
-  value: string;
-  link: string;
-}
+import { MenuItem } from '../../../constans/menu';
+import { scrollToBlock } from '../../../helpers/scrollToBlock';
 
 type Props = {
   items: MenuItem[];
 };
 
 const Menu: React.FC<Props> = (props) => {
-  const scrollToBlock = (id: string) => {
-    if (id[0] === '/') return;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
     <nav className={styles.menu}>
       <ul className={styles.menu__list}>

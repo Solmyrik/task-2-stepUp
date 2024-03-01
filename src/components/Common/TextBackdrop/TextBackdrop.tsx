@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './TextBackdrop.module.css';
 
 type Props = {
-  value: string;
+  children: React.ReactNode;
   className?: string;
 };
 
 const TextBackdrop: React.FC<Props> = (props) => {
-  return <div className={`${styles.text} ${props.className}`}>{props.value}</div>;
+  return <p className={`${styles.text} ${props.className}`}>{props.children}</p>;
 };
 
 export default TextBackdrop;

@@ -51,9 +51,9 @@ const SearchBlock: React.FC<Props> = (props) => {
       </label>
       <Button
         type="primary-search"
-        text="Search"
-        onClick={(e: React.MouseEvent<HTMLButtonElement>) => onSearchProducts(e)}
-      />
+        onClick={(e: React.MouseEvent<HTMLButtonElement>) => onSearchProducts(e)}>
+        Search
+      </Button>
     </form>
   );
 };

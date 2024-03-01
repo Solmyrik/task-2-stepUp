@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './Faq.module.css';
 import Paragraph from '../Common/Paragraph/Paragraph';
 
@@ -18,24 +18,25 @@ const FaqItem = (props: Props) => {
       setHeight(heightCurrent);
     }
   }, []);
+
   const maxHeight = active === true ? height : '0px';
-  // под вопросом
-  //   const paddingBottom = active === true ? '20px' : '30px';
 
   return (
-    <div className={styles.answers}>
+    <article className={styles.answers}>
       <div className={styles.answers__item}>
         <div className={styles.answers__top}>
-          <div className={styles.answers__title}>{props.ques}</div>
+          <div onClick={() => setActive(!active)} className={styles.answers__title}>
+            {props.ques}
+          </div>
         </div>
         <div ref={myElementRef} style={{ maxHeight }} className={styles.answers__body}>
-          <Paragraph value={props.answer} type="secondary" />
+          <Paragraph type="secondary">{props.answer}</Paragraph>
         </div>
       </div>
-      <div
+      <button
         onClick={() => setActive(!active)}
-        className={active ? [styles.cross, styles.active].join(' ') : styles.cross}></div>
-    </div>
+        className={active ? [styles.cross, styles.active].join(' ') : styles.cross}></button>
+    </article>
   );
 };
 

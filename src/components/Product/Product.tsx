@@ -1,13 +1,28 @@
-import React from 'react';
 import styles from './Product.module.css';
 import H3Title from '../Common/H3Title/H3Title';
-import Paragraph from '../Common/Paragraph/Paragraph';
-import Stars from '../Common/Stars/Stars';
 import { subtractPercentage } from '../../helpers/subtractPercentage';
 import Gallary from '../Gallary/Gallary';
+import ProductItem from './ProductItem';
+import Button from '../Common/Button/Button';
+import { useState } from 'react';
+import ProductForm from './ProductForm';
+
+export type ProductType = {
+  title: string;
+  id: number;
+  rating: number;
+  price: number;
+  discountPercentage: number;
+  stock: number;
+  brand: string;
+  category: string;
+  description: string;
+  thumbnail: string;
+  images: string[];
+};
 
 type Props = {
-  product: any;
+  product: ProductType;
 };
 
 const Product = (props: Props) => {
@@ -25,6 +40,9 @@ const Product = (props: Props) => {
     images,
   } = props.product;
   const discountPrice = subtractPercentage(price, discountPercentage);
+  const [activeForm, setActiveForm] = useState<boolean>(false);
+
+  console.log(discountPercentage);
 
   return (
     <section className={styles.product}>
@@ -32,49 +50,35 @@ const Product = (props: Props) => {
         <div className={styles.product__gallery}>
           <Gallary thumbnail={thumbnail} images={images} alt={title} />
         </div>
-        <article className={styles.product__content}>
-          <div className={styles.product__header}>
-            <H3Title value={title} />
-            <div className={styles.product__item}>
-              <Paragraph value="SKU ID" type="primary-opacity" />
-              <Paragraph value={id} type="secondary" />
-            </div>
-          </div>
-          <div className={styles.product__specifications}>
-            <div className={styles.product__item}>
-              <Paragraph value="Rating" type="primary-opacity" />
-              <Stars rating={rating && Math.floor(rating)} />
-            </div>
-            <div className={styles.product__item}>
-              <Paragraph value="Base price" type="primary-opacity" />
-              <Paragraph value={`${price}$`} type="secondary" />
-            </div>
-            <div className={styles.product__item}>
-              <Paragraph value="Discount percentage" type="primary-opacity" />
-              <Paragraph value={`${discountPercentage}%`} type="secondary" />
-            </div>
-            <div className={styles.product__item}>
-              <Paragraph value="Discount price" type="primary-opacity" />
-              <Paragraph value={`${discountPrice}$`} type="secondary" />
-            </div>
-            <div className={styles.product__item}>
-              <Paragraph value="Stock" type="primary-opacity" />
-              <Paragraph value={stock} type="secondary" />
-            </div>
-            <div className={styles.product__item}>
-              <Paragraph value="Brand" type="primary-opacity" />
-              <Paragraph value={brand} type="secondary" />
-            </div>
-            <div className={styles.product__item}>
-              <Paragraph value="Category" type="primary-opacity" />
-              <Paragraph value={category} type="secondary" />
-            </div>
-            <div className={styles.product__item}>
-              <Paragraph value="Description" type="primary-opacity" />
-              <Paragraph value={description} type="secondary" />
-            </div>
-          </div>
-        </article>
+        <div className={styles.product__content}>
+          <article className={styles.product__header}>
+            <H3Title>{title}</H3Title>
+            <ProductItem value={id} identifier="SKU ID" />
+          </article>
+          {activeForm ? (
+            <ProductForm product={props.product} setActiveForm={setActiveForm} />
+          ) : (
+            <article className={styles.product__body}>
+              <div className={styles.product__specifications}>
+                <ProductItem
+                  type="stars"
+                  identifier="Rating"
+                  rating={rating && Math.floor(rating)}
+                />
+                <ProductItem value={`${price}$`} identifier="Base price" />
+                <ProductItem value={`${discountPercentage}%`} identifier="Discount percentage" />
+                <ProductItem value={`${discountPrice}$`} identifier="Discount price" />
+                <ProductItem value={stock} identifier="Stock" />
+                <ProductItem value={brand} identifier="Brand" />
+                <ProductItem value={category} identifier="Category" />
+                <ProductItem value={description} identifier="Description" />
+              </div>
+              <Button type="primary-big" onClick={() => setActiveForm(true)}>
+                Edit
+              </Button>
+            </article>
+          )}
+        </div>
       </div>
     </section>
   );
