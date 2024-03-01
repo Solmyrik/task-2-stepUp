@@ -23,26 +23,16 @@ export type ProductType = {
 
 type Props = {
   product: ProductType;
+  discountPercentage: number;
 };
 
 const Product = (props: Props) => {
-  const {
-    title,
-    id,
-    rating,
-    price,
-    discountPercentage,
-    stock,
-    brand,
-    category,
-    description,
-    thumbnail,
-    images,
-  } = props.product;
-  const discountPrice = subtractPercentage(price, discountPercentage);
+  const { title, id, rating, price, stock, brand, category, description, thumbnail, images } =
+    props.product;
+  const discountPrice = subtractPercentage(price, props.discountPercentage);
   const [activeForm, setActiveForm] = useState<boolean>(false);
 
-  console.log(discountPercentage);
+  console.log(props.discountPercentage);
 
   return (
     <section className={styles.product}>
@@ -66,7 +56,10 @@ const Product = (props: Props) => {
                   rating={rating && Math.floor(rating)}
                 />
                 <ProductItem value={`${price}$`} identifier="Base price" />
-                <ProductItem value={`${discountPercentage}%`} identifier="Discount percentage" />
+                <ProductItem
+                  value={`${props.discountPercentage}%`}
+                  identifier="Discount percentage"
+                />
                 <ProductItem value={`${discountPrice}$`} identifier="Discount price" />
                 <ProductItem value={stock} identifier="Stock" />
                 <ProductItem value={brand} identifier="Brand" />

@@ -47,11 +47,9 @@ export const SingleProductSlice = createSlice({
     });
     builder.addCase(fetchUpdateProducts.pending, (state, action) => {
       state.product = {};
-      state.discountPercentage = 0;
     });
     builder.addCase(fetchUpdateProducts.fulfilled, (state, action) => {
       state.product = action.payload;
-      console.log(state.product);
     });
     builder.addCase(fetchUpdateProducts.rejected, (state, action) => {
       state.product = {};

@@ -16,6 +16,7 @@ const ProductPage = (props: Props) => {
   const { id } = useParams();
   const dispatch = useDispatch<AppDispatch>();
   const product = useSelector((state: RootState) => state.product.product);
+  const discountPercentage = useSelector((state: RootState) => state.product.discountPercentage);
   const [productNotFound, setProductNotFound] = useState(false);
 
   useEffect(() => {
@@ -52,7 +53,7 @@ const ProductPage = (props: Props) => {
         <Container>
           <H2Title>{product.title}</H2Title>
         </Container>
-        <Product product={product} />
+        <Product product={product} discountPercentage={discountPercentage} />
       </main>
     </>
   );
